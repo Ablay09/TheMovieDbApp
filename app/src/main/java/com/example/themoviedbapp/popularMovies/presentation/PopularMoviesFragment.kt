@@ -17,7 +17,6 @@ class PopularMoviesFragment : Fragment() {
         get() = _binding!!
 
     private val viewModel: PopularMoviesViewModel by viewModel()
-//    private val viewModel: PopularMoviesViewModel by viewModel()
     private var adapter: PopularMoviesAdapter? = null
 
     override fun onCreateView(
@@ -52,7 +51,7 @@ class PopularMoviesFragment : Fragment() {
     private fun initObservers() {
         viewModel.popularMoviesLiveData.observe(viewLifecycleOwner) { movies ->
             Timber.d("movies: $movies")
-            adapter?.setMovies(movies)
+            adapter?.submitList(movies)
         }
     }
 
