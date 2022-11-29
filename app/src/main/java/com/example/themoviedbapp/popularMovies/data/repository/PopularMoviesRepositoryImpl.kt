@@ -17,20 +17,5 @@ class PopularMoviesRepositoryImpl(
             return BaseResultDomain.Success(result.results.map { it.fromDto() })
         }
         return BaseResultDomain.Error(UnexpectedException("unexpected error"))
-
-        /*try {
-            val response = colorDataSource.getColors().execute()
-            val result = response.body() ?: return BaseResultDomain.Error(UnexpectedException("unexpected message"))
-            if (response.isSuccessful) {
-
-                return BaseResultDomain.Success(result.map { it.mapToDomain() })
-            }
-
-            return response.errorBody().toErrorResultDomain()
-        } catch (e: Exception) {
-
-            return BaseResultDomain.Error(exception = e)
-        }*/
-
     }
 }

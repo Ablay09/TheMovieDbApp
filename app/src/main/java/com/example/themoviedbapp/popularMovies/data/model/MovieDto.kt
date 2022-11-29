@@ -16,6 +16,8 @@ data class MovieDto(
     val overview: String?,
     @SerialName("release_date")
     val releaseDate: String?,
+    @SerialName("title")
+    val title: String?,
     @SerialName("genre_ids")
     val genreIds: List<Int>?,
     @SerialName("original_title")
@@ -40,6 +42,7 @@ data class MovieDto(
             posterPath,
             overview,
             releaseDate,
+            title,
             genreIds,
             originalTitle,
             originalLanguage,

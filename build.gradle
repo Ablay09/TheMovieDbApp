@@ -17,6 +17,9 @@ ext {
     retrofitVersion = "2.9.0"
     coroutineVersion = "1.6.4"
     timberVersion = "5.0.1"
+    fragmentVersion = "1.5.4"
+    koinVersion = "3.2.2"
+    koinAndroidVersion = "3.2.3"
 }
 
 task clean(type: Delete) {

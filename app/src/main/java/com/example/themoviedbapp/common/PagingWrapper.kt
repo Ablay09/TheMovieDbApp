@@ -1,7 +1,10 @@
 package com.example.themoviedbapp.common
 
+import com.example.themoviedbapp.popularMovies.data.model.MovieDto
 import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class PagingWrapper<out T>(
     @SerialName("page")
     val page: Long? = null,
